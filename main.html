@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        #tempCalc {
+            display: flex;
+            margin: 164px 500px;
+            border: 2px solid black;
+            height: 167px;
+            background-color: #ffc0cb96;
+
+        }
+
+        #temp {
+            width: 61px;
+            height: 17px;
+
+            position: absolute;
+            top: 240px;
+            left: 705px;
+        }
+
+        label {
+
+            margin: 50px auto;
+        }
+
+        #temp_diff {
+            height: 27px;
+            position: absolute;
+            left: 781px;
+            top: 237px;
+            width: 79px;
+        }
+
+        #submit {
+            width: 100px;
+            height: 24px;
+            position: absolute;
+            top: 266px;
+            left: 726px;
+        }
+        #resultContainer{
+           
+  position: absolute;
+  top: 296px;
+  left: 726px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="tempCalc" onsubmit="calc();return false">
+        <label for="temp">Please enter the temperature you'd like to convert.</label>
+        <input type="number" name="temp" id="temp">
+        <select name="temp_diff" id="temp_diff">
+            <option value="cel">°Celcius</option>
+            <option value="fahr">°Fahrenheit</option>
+        </select>
+        <button id="submit">Submit</button>
+        <span id="resultContainer"></span>
+    </form>
+    <script src="temperature_converter.js"></script>
+</body>
+
+</html>
